@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Functions</h1>
+
+    <script>
+        /* function doStuff(){
+            var myString = "Here is a string of text";
+            var upperString = myString.toUpperCase();
+            console.log(myString);
+            console.log(upperString);
+        }
+        doStuff(); */
+    
+        //function challenge7(){}
+    
+        /* var wholeNumber = prompt("Enter a whole number", 12);
+
+        if (wholeNumber < 10){
+            console.log("Number is below 10");
+            console.log(`The number is ${wholeNumber}`);
+        } else if (wholeNumber >= 10) {
+            console.log("Number is above 10");
+            console.log(`The number is: ${wholeNumber}`);
+        }
+        else{
+            console.log("Error with number input");
+        } */
+
+        /* var wholeNumber = prompt("Enter a whole number", 12);
+
+        function challenge7(wholeNumber){
+
+            if (wholeNumber < 10){
+                console.log("Number is below 10");
+                console.log(`The number is ${wholeNumber}`);
+            } else if (wholeNumber >= 10) {
+                console.log("Number is above 10");
+                console.log(`The number is: ${wholeNumber}`);
+            }
+            else{
+                console.log("Error with number input");
+            }
+        }
+        challenge7(wholeNumber); */
+
+        function upperMessage( message ) {
+            var upper = message.toUpperCase();
+            console.log(upper);
+        }
+        //upperMessage ("Winter is Coming");
+
+        function addNums(num1, num2){
+            var sum = num1 + num2;
+            console.log(sum);
+        }
+        //addNums(5, 7);
+
+        function returnSum(num1, num2){
+            var sum = num1 + num2;
+            return sum;
+        }
+
+        //console.log("The goat is #" + returnSum(5, 7));
+
+        //console.log(Math.random(10, 52) );
+
+        function randomInt(min, max){
+            var numOfValues = max-min+1;
+            var randomNum = Math.random();
+            var randomVal = randomNum * numOfValues;
+            var roundedRandomVal = Math.floor(randomVal)
+            var finalNum = min+roundedRandomVal;
+            return finalNum;
+        }
+
+        var rInt = randomInt(5, 10);
+        console.log(rInt);
+
+        var foods = ['venison', 'ramen', 'caviar', 'skoal']
+
+        console.log(foods[randomInt(0,foods.length-1)]);
+
+    </script>
+    
+</body>
+</html>
