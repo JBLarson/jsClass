@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>JS and the DOM</title>
+
+	<style>
+		.blue { color: blue;}
+	</style>
+
+</head>
+<body>
+    <h1>JS and the DOM</h1>
+
+    <!-- <p id="one">Winter is Coming</p>
+    <script>
+        document.getElementById("one").style.color="red";
+    </script> -->
+
+    <!-- <p>This is a paragraph</p>
+    <p>This is another paragraph</p>
+    <p>This is yet another paragraph</p>
+
+    <script>
+
+        var myPgs = document.getElementsByTagName('p');
+        console.log(myPgs);
+		for(var i = 0; i < myPgs.length+1; i++){
+			myPgs[i].style.fontSize="22px";
+			alert(`showing parage ${i}`);
+		}
+		
+
+	</script> -->
+
+	<!-- <p class="blue">Here is some text</p>
+	<p>Here is more text</p>
+	<p>Here is even more text</p>
+
+	<script>
+		var myText = document.getElementsByClassName("blue");
+		for(var i=0; i < myText.length; i++){
+			myText[i].style.color="blue";
+		}
+	</script> -->
+
+	<!-- <div id="someId">
+		<p class="someClass">Here is some text</p>
+		<p>Here is more text</p>
+	</div>
+
+	<script>
+		var myText = document.querySelector('#someId .someClass');
+		myText.style.fontSize = '24px';
+	</script> -->
+
+
+	<!--query select all
+	 <div id="special">
+		<p>Here is some text</p>
+		<p>Here is more text</p>
+	</div>
+	<p>Not this paragraph tho</p>
+
+	<script>
+		var myText = document.querySelectorAll("#special p");
+		for(var i=0; i<myText.length; i++){
+			myText[i].style.fontWeight='bold';
+		}
+	</script> -->
+
+	<!--inner html-->
+
+	<!-- <div id="special">
+		<p>Here is some text</p>
+		<p>Here is more text</p>
+	</div>
+
+	<script>
+
+		//var myDiv = document.getElementById('special')
+		//myDiv.innerHTML = "<p>TB12 won</p>";
+		document.querySelector('#special').innerHTML = "<p>Here is new paragraph</p>";
+	</script> -->
+
+
+
+	<!-- class name 
+		<div id="special">
+		<p>Winter is Coming</p>
+		<p>Winds of Winter isn't</p>
+	</div>
+	
+	<script>
+
+		var firstPara = document.querySelector('p');
+		firstPara.className = "blue";
+
+	</script> -->
+
+	<!-- <form>
+		<label><input type="checkbox">Yes!</label>
+	</form>
+
+	<script>
+		var myCheckbox = document.querySelector('input');
+		myCheckbox.setAttribute('checked', 'checked');
+	</script> -->
+
+
+
+	<!-- creating elements with textNodes
+	<div>
+		<p>This is the first paragraph on the page</p>
+	</div>
+
+	
+		var myTag = document.createElement('p');
+		var myText = document.createTextNode('Winter is coming');
+		myTag.appendChild(myText);
+		var myDiv = document.querySelector('div');
+		myDiv.appendChild(myTag);
+	</script> -->
+
+
+	<div>
+		<p>This element will remain</p>
+		<p>This paragraph will disappear</p>
+	</div>
+
+	<script>
+		var myDiv = document.querySelector('div');
+		myDiv.removeChild(myDiv.children[1]);
+	</script>
+
+
+</body>
+</html>
