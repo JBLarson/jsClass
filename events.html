@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Events</h1>
+    <!-- capturing events with event property
+    <button>Don't press me</button>    
+    <script>
+
+        var btn = document.querySelector('button');
+
+        function ouch(){
+            alert("stupid motherfucker");
+        }
+        // if you put parenthesis on the function it will run immediately
+        // without parenthesis the function only runs when the button is clicked
+        
+        //btn.onclick = ouch;
+
+        // an alternative would be defining an anonymous function
+        btn.onclick = function(){alert('stupid twat');}
+
+    </script>
+    -->
+
+    <!-- capturing events with event listeners -->
+    <button>I'm learning JS</button>
+
+    <script>
+    function ouch(){
+        alert('Winter is coming');
+    }
+    btn = document.querySelector('button')
+    
+    //btn.addEventListener('click', ouch);
+
+    btn.addEventListener('click', function(){
+        alert('Winter is coming');
+    });
+
+
+    </script>
+
+</body>
+</html>
