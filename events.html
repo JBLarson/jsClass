@@ -5,15 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
+
+    <style>
+        div {
+            width: 50px;
+            height: 5000px;
+            background-color: red;
+        }
+    </style>
+
+
 </head>
 <body>
     <h1>Events</h1>
     <!-- capturing events with event property
     <button>Don't press me</button>    
     <script>
-
         var btn = document.querySelector('button');
-
         function ouch(){
             alert("stupid motherfucker");
         }
@@ -21,30 +29,147 @@
         // without parenthesis the function only runs when the button is clicked
         
         //btn.onclick = ouch;
-
         // an alternative would be defining an anonymous function
         btn.onclick = function(){alert('stupid twat');}
-
     </script>
     -->
 
+
+
+
+
     <!-- capturing events with event listeners -->
+    
+    <!-- The Event Object
     <button>I'm learning JS</button>
+
+    <button class="btn2">Another button</button>
+
+    <a href="https://google.com">Link to Google</a>
 
     <script>
     function ouch(){
         alert('Winter is coming');
     }
     btn = document.querySelector('button')
-    
+    btn2 = document.getElementsByClassName('btn2')[0]
     //btn.addEventListener('click', ouch);
 
-    btn.addEventListener('click', function(){
-        alert('Winter is coming');
+    btn.addEventListener('click', function(event){
+        alert('Button was pressed');
+        event.target.style.backgroundColor = "green";
     });
 
+    btn2.addEventListener('click', function(event2){
+        event.target.style.backgroundColor = "red";
+    })
 
+    var link = document.querySelector('a');
+
+    link.addEventListener('click', function(event){
+        event.preventDefault()
+
+        alert("sorry no google for you");
+    }) -->
+
+
+
+    <!-- passing event object
+    <form method="get">
+
+        <label> Your Name:  <input type="text" name="name"></label>
+        <label> Your Number:  <input type="text" name="number"></label>
+
+        <input type="submit" value="send">
+    
+    </form>
+
+    <script>
+
+        var myForm = document.querySelector('form');
+
+        myForm.addEventListener( 'submit', function(e){
+            e.preventDefault()
+            var formData0 = document.querySelectorAll('input')[0].value;
+            var formData1 = document.querySelectorAll('input')[1].value;
+
+            alert(formData0 + formData1);
+        });
+
+    </script> -->
+
+
+
+    <!-- Mouseover events
+    <div></div>
+
+    <script>
+    
+        var heading = document.querySelector('h1');
+        var box = document.querySelector('div');
+
+        box.addEventListener('mouseover', function(){
+            heading.innerHTML = "The mouse is in the box";
+        });
+
+        box.addEventListener('mouseout', function(){
+            heading.innerHTML = "The mouse left the box";
+        });
+
+        heading.addEventListener('mouseover', function(){
+            heading.innerHTML = "roll your mouse over the boxes";
+        });
+
+    </script> -->
+
+
+
+    <!-- scroll events
+    <div></div>
+    <script>
+    
+        // var is less expensive when variable is defined up here
+        var pageTop;
+
+        // how far from the top of the page have I gone down
+        // event listener is very expensive, it fires very often
+        window.addEventListener('scroll', function(){
+            
+            // better to update variable down here then define each update
+            //var pageTop = window.pageYOffset;
+            pageTop = window.pageYOffset;
+            console.log(pageTop);
+        });
+    
+    </script> -->
+
+
+
+    <!-- window resizing
+        
+        <h2>Resizing the window - watch the console</h2>
+
+    <script>
+    
+        window.addEventListener('resize', function(){
+            console.log(`The window width is ${window.innerWidth}`)
+            console.log(`The window height is ${window.innerHeight}`)
+        })
+    
+    </script> -->
+
+
+    <h2>Keydown event</h2>
+    <p>Press a key on the keyboard</p>
+
+    <script>
+    
+        document.addEventListener('keydown', function(event){
+            alert(`The ${event.key} key was pressed`);
+        })
+    
     </script>
+
 
 </body>
 </html>
