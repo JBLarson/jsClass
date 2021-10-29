@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges 22-30</title>
+</head>
+<body>
+
+    <h1>Challenges 22-30</h1>
+
+    <!-- <h2>Challenge 22</h2>
+    <p>Here is a paragraph of text</p>
+    <button>Turn this shit green</button>
+
+    <script>
+        var btn = document.querySelector('button');
+        console.log(btn)
+
+        btn.addEventListener('click', function(){
+            btn.style.backgroundColor = 'green';
+        });
+        
+
+    </script>  -->
+
+    <!-- <h2>Challenge 23</h2>
+
+    <p>Here is a paragraph</p>
+    <p>Here is another</p>
+    <p>Here is one more</p>
+
+    <button>Turn paragraphs green</button>
+
+    <script>
+
+        var btn = document.querySelector('button');
+        var paras = document.querySelectorAll('p');
+
+        btn.addEventListener('click', function(){
+            for(var i = 0; i < paras.length; i++){
+                paras[i].style.backgroundColor = 'green';
+            }
+        });
+
+    </script> -->
+
+    <!-- <h2>Challenge 24</h2>
+
+    <div>
+        <p>Here is a paragraph of text</p>
+    </div>
+    <button>Add Paragraph</button>
+
+    <script>
+
+        var btn = document.querySelector('button');
+        var theDiv = document.querySelector('div');
+
+
+        btn.addEventListener('click', function(){
+            var myTag = document.createElement('p');
+            var myText = document.createTextNode('Winter is coming');
+            myTag.appendChild(myText);
+            theDiv.appendChild(myTag);
+        })
+
+
+    </script> -->
+
+    <!-- <h2>Challenge 25</h2>
+    <div>
+        <p>This is a paragraph</p>
+        <p>Button removes this paragraph</p>
+    </div>
+
+
+    <button>Add Paragraph</button>
+    <button>Remove paragraph</button>
+
+    <script>
+        var btns = document.querySelectorAll('button');
+        var btn0 = btns[0];
+        var btn1 = btns[1];
+        var theDiv = document.querySelector('div');
+
+
+        btn0.addEventListener('click', function(){
+            var myTag = document.createElement('p');
+            var myText = document.createTextNode('Winter is coming');
+            myTag.appendChild(myText);
+            theDiv.appendChild(myTag);
+        });
+
+        btn1.addEventListener('click', function(){
+            var theDiv = document.querySelector('div');
+            console.log(theDiv.children.length);
+            theDiv.removeChild(theDiv.children[theDiv.children.length-1]);            
+
+        })
+
+
+    </script> -->
+
+    <h2>Challenge 26</h2>
+
+    
+
+
+
+</body>
+</html>
