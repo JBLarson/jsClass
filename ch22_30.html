@@ -5,6 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenges 22-30</title>
+
+    <style>
+
+
+        /* challenge 28
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 0, 0);
+            transition: all 2s;
+        }
+
+        .big {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(0, 0, 255);
+            transition: all 2s;
+        } */
+
+        /*challenge 29 and 30*/
+        body {height: 3000px;}
+        .one {background-color: beige; transition: all 3s;}
+        .two {background-color: blueviolet; transition: all 3s;}
+        .three {background-color: coral; transition: all 3s;}
+        .four {background-color: cornflowerblue; transition: all 3s;}
+        .five {background-color: darkgoldenrod; transition: all 3s;}
+        
+
+    </style>
+
 </head>
 <body>
 
@@ -103,11 +133,151 @@
 
     </script> -->
 
-    <h2>Challenge 26</h2>
+    <!-- <h2>Challenge 26</h2>
 
-    
+    <div>
+        <p>This is paragraph number 1</p>
+    </div>
+
+    <button>Add Paragraph</button>
+    <button>Remove Paragraph</button>
+
+    <script>
+
+        var btns = document.querySelectorAll('button');
+        var btn0 = btns[0];
+        var btn1 = btns[1];
+        var theDiv = document.querySelector('div');
 
 
+        /* btn0.addEventListener('click', function(){
+            var myTag = document.createElement('p');
+            var myText = document.createTextNode('Winter is coming');
+            myTag.appendChild(myText);
+            theDiv.appendChild(myTag);
+        }); */
+
+        btn1.addEventListener('click', function(){
+            var theDiv = document.querySelector('div');
+            theDiv.removeChild(theDiv.children[theDiv.children.length-1]);            
+
+        });
+
+        function updatePgNum(){
+            
+            var theDiv = document.querySelector('div');
+            var pgNum = theDiv.children.length+1;
+
+
+            var myTag = document.createElement('p');
+            var myText = document.createTextNode(`This is paragraph number ${pgNum}`);
+            myTag.appendChild(myText);
+            theDiv.appendChild(myTag);
+        }
+
+        btn0.addEventListener('click', updatePgNum);
+        //btn1.addEventListener('click', updatePgNum);
+
+    </script> -->
+
+    <!-- <h2>Challenge 27</h2>
+
+    <form>
+
+        <label>Enter a number:<input type="text"></label>
+        <input type="submit" value="send number">
+
+    </form>
+
+    <script>
+        var myForm = document.querySelector('form');
+
+        var h2Tag = document.querySelector('h2');
+
+
+        myForm.addEventListener('submit', function(event){
+            event.preventDefault();
+
+            var formData0 = parseInt(document.querySelectorAll('input')[0].value);
+
+            var theHeader = document.querySelector('h2');
+            var myTag = document.createElement('h2');
+            
+            if(formData0){
+                h2Tag.style.fontSize = formData0+"px";
+            }
+            else{
+                alert('please enter number');
+            }
+            
+
+        });
+
+
+    </script> -->
+
+
+    <!-- <h2>Challenge 28</h2>
+
+    <div></div>
+
+    <script>
+
+        var theDiv = document.querySelector('div');
+
+        theDiv.addEventListener('mouseover', function(){
+            theDiv.className = "big";
+        });
+
+        theDiv.addEventListener('mouseout', function(){
+            theDiv.className= "div";
+        })
+
+
+    </script> -->
+
+    <!-- <h2>Challenge 29</h2>
+
+
+    <script>
+
+        var pageTop;
+        var theBody = document.querySelector('body');
+
+        window.addEventListener('scroll', function(){
+            pageTop = window.pageYOffset;
+            console.log(pageTop);
+
+            switch(true){
+
+                case pageTop < 500: theBody.className = "one"; break;
+                case pageTop < 1000: theBody.className = "two"; break;
+                case pageTop < 1500: theBody.className = "three"; break;
+                case pageTop < 2000: theBody.className = "four"; break;
+
+                default: theBody.className="five";
+            }
+        });
+
+
+    </script> -->
+
+    <h2>Challenge 30</h2>
+
+    <p>Press the B key to turn the page beige</p>
+    <p>Press the V key to turn the page blueviolet</p>
+    <p>Press the C key to turn the page coral</p>
+    <p>Press the F key to turn the page cornflowerblue</p>
+    <p>Press the G key to turn the page darkgoldenrod</p>
+
+
+
+    <script>
+
+        
+
+
+    </script>
 
 </body>
 </html>
