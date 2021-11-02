@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scope</title>
+</head>
+<body>
+    <h1>Scope in JS</h1>
+
+
+    <!-- Strategy 1: never use global scope and IIFE's
+    <script>
+    
+        //var aVariable = "this is global";
+        //aVariable = "this is global";
+
+        function testScope(){
+            oopsGlobal = "This is accidentaly global";
+            var aVariable = "this is local";
+            console.log(aVariable);
+        }
+        testScope();
+
+        //console.log(aVariable);
+        console.log(oopsGlobal);
+
+
+    </script> -->
+
+
+    <!-- Strategy 2: use strict
+    <p>Here is a paragraph</p>
+    <p>Here is another</p>
+    <p>Yet another paragraph</p>
+
+
+    <script>
+
+        // all enclosed variables are local to the function
+        (function(){
+            var myPs = document.querySelectorAll('p');
+
+            for( var i = 0; i<myPs.length; i++){
+                myPs[i].style.color = "red";
+            }
+        }());
+    
+        console.log(myPs);
+
+        "use strict";
+
+        var newVar = "not properly declared";
+
+        console.log(newVar);
+
+    </script> -->
+
+    <!-- Strategy 3: Const and let
+	<script>
+    
+        //const cheese = "yummy";
+        //console.log(cheese);
+        
+        // will throw a typerror "assignment to constant variable"
+        
+        //cheese = "cheese is not yummy";
+    
+		for( let i=0; i<10; i++){
+			console.log(i);
+		}
+
+		// will throw a referenceError "i is not defined"
+		console.log(`The value of i is: ${i}`);
+
+
+    </script> -->
+
+	<!-- Also Strategy 3: Hoisting in Javascript
+	<script>
+	
+		console.log(cheese);
+		var cheese = "yummy";
+
+		console.log(cheese2);
+		const cheese2 = "yummier";
+	
+	</script> -->
+
+
+
+</body>
+</html>
