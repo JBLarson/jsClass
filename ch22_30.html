@@ -16,7 +16,6 @@
             background-color: rgb(255, 0, 0);
             transition: all 2s;
         }
-
         .big {
             width: 200px;
             height: 200px;
@@ -43,60 +42,44 @@
     <!-- <h2>Challenge 22</h2>
     <p>Here is a paragraph of text</p>
     <button>Turn this shit green</button>
-
     <script>
         var btn = document.querySelector('button');
         console.log(btn)
-
         btn.addEventListener('click', function(){
             btn.style.backgroundColor = 'green';
         });
         
-
     </script>  -->
 
     <!-- <h2>Challenge 23</h2>
-
     <p>Here is a paragraph</p>
     <p>Here is another</p>
     <p>Here is one more</p>
-
     <button>Turn paragraphs green</button>
-
     <script>
-
         var btn = document.querySelector('button');
         var paras = document.querySelectorAll('p');
-
         btn.addEventListener('click', function(){
             for(var i = 0; i < paras.length; i++){
                 paras[i].style.backgroundColor = 'green';
             }
         });
-
     </script> -->
 
     <!-- <h2>Challenge 24</h2>
-
     <div>
         <p>Here is a paragraph of text</p>
     </div>
     <button>Add Paragraph</button>
-
     <script>
-
         var btn = document.querySelector('button');
         var theDiv = document.querySelector('div');
-
-
         btn.addEventListener('click', function(){
             var myTag = document.createElement('p');
             var myText = document.createTextNode('Winter is coming');
             myTag.appendChild(myText);
             theDiv.appendChild(myTag);
         })
-
-
     </script> -->
 
     <!-- <h2>Challenge 25</h2>
@@ -104,102 +87,71 @@
         <p>This is a paragraph</p>
         <p>Button removes this paragraph</p>
     </div>
-
-
     <button>Add Paragraph</button>
     <button>Remove paragraph</button>
-
     <script>
         var btns = document.querySelectorAll('button');
         var btn0 = btns[0];
         var btn1 = btns[1];
         var theDiv = document.querySelector('div');
-
-
         btn0.addEventListener('click', function(){
             var myTag = document.createElement('p');
             var myText = document.createTextNode('Winter is coming');
             myTag.appendChild(myText);
             theDiv.appendChild(myTag);
         });
-
         btn1.addEventListener('click', function(){
             var theDiv = document.querySelector('div');
             console.log(theDiv.children.length);
             theDiv.removeChild(theDiv.children[theDiv.children.length-1]);            
-
         })
-
-
     </script> -->
 
     <!-- <h2>Challenge 26</h2>
-
     <div>
         <p>This is paragraph number 1</p>
     </div>
-
     <button>Add Paragraph</button>
     <button>Remove Paragraph</button>
-
     <script>
-
         var btns = document.querySelectorAll('button');
         var btn0 = btns[0];
         var btn1 = btns[1];
         var theDiv = document.querySelector('div');
-
-
         /* btn0.addEventListener('click', function(){
             var myTag = document.createElement('p');
             var myText = document.createTextNode('Winter is coming');
             myTag.appendChild(myText);
             theDiv.appendChild(myTag);
         }); */
-
         btn1.addEventListener('click', function(){
             var theDiv = document.querySelector('div');
             theDiv.removeChild(theDiv.children[theDiv.children.length-1]);            
-
         });
-
         function updatePgNum(){
             
             var theDiv = document.querySelector('div');
             var pgNum = theDiv.children.length+1;
-
-
             var myTag = document.createElement('p');
             var myText = document.createTextNode(`This is paragraph number ${pgNum}`);
             myTag.appendChild(myText);
             theDiv.appendChild(myTag);
         }
-
         btn0.addEventListener('click', updatePgNum);
         //btn1.addEventListener('click', updatePgNum);
-
     </script> -->
 
     <!-- <h2>Challenge 27</h2>
-
     <form>
-
         <label>Enter a number:<input type="text"></label>
         <input type="submit" value="send number">
-
     </form>
-
     <script>
         var myForm = document.querySelector('form');
-
         var h2Tag = document.querySelector('h2');
-
-
         myForm.addEventListener('submit', function(event){
             event.preventDefault();
-
             var formData0 = parseInt(document.querySelectorAll('input')[0].value);
-
             var theHeader = document.querySelector('h2');
             var myTag = document.createElement('h2');
             
@@ -210,56 +162,37 @@
                 alert('please enter number');
             }
             
-
         });
-
-
     </script> -->
 
 
     <!-- <h2>Challenge 28</h2>
-
     <div></div>
-
     <script>
-
         var theDiv = document.querySelector('div');
-
         theDiv.addEventListener('mouseover', function(){
             theDiv.className = "big";
         });
-
         theDiv.addEventListener('mouseout', function(){
             theDiv.className= "div";
         })
-
-
     </script> -->
 
     <!-- <h2>Challenge 29</h2>
-
-
     <script>
-
         var pageTop;
         var theBody = document.querySelector('body');
-
         window.addEventListener('scroll', function(){
             pageTop = window.pageYOffset;
             console.log(pageTop);
-
             switch(true){
-
                 case pageTop < 500: theBody.className = "one"; break;
                 case pageTop < 1000: theBody.className = "two"; break;
                 case pageTop < 1500: theBody.className = "three"; break;
                 case pageTop < 2000: theBody.className = "four"; break;
-
                 default: theBody.className="five";
             }
         });
-
-
     </script> -->
 
     <h2>Challenge 30</h2>
@@ -274,8 +207,21 @@
 
     <script>
 
-        
+    var theBody = document.querySelector('body');
 
+    window.addEventListener('keydown', function(event){
+        var theKey = event.key;
+        console.log(`The ${event.key} key was pressed`)
+
+        switch(true){
+        
+            case theKey == "b": theBody.className = "one"; break;
+            case theKey == "v": theBody.className = "two"; break;
+            case theKey == "c": theBody.className = "three"; break;
+            case theKey == "f": theBody.className = "four"; break;
+            case theKey == "g": theBody.className = "five"; break;
+        }
+    });
 
     </script>
 
